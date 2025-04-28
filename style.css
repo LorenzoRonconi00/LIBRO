@@ -39,7 +39,7 @@ img {
 
 /* Elementi base */
 body {
-    font-family: var(--font-primary);
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--color-dark);
     background: var(--color-light);
@@ -91,6 +91,9 @@ header {
     text-align: center;
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
 }
 
 .hero__text {
@@ -121,10 +124,16 @@ p {
 .hero__icone {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 1rem;
     margin-right: 7px;
     margin-left: 7px;
     gap: 1%;
+}
+
+.hero__icone p {
+    margin-bottom: 0;
 }
 
 .hero__cover {
@@ -136,7 +145,6 @@ p {
 }
 
 .autore {
-    background: var(--color-primary);
     color: var(--color-white);
     text-align: center;
     padding: var(--spacing-lg);
@@ -152,7 +160,82 @@ p {
 }
 
 .autore__cover {
-    width: 110%;
+    width: 100%;
+}
+
+.autore__cover img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+
+/* Libri consigliati */
+.consigliati_container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: var(--spacing-lg);
+    align-items: center;
+    justify-content: center;
+}
+
+.consigliati_container h2 {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.consigliati_libri_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.consigliati_libri_content, .firmacopie_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.firmacopie_content {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.consigliati_libri_content img {
+    width: 250px;
+    height: 390px;
+    display: block;
+}
+
+.firmacopie_content img {
+    width: 300px;
+    height: 300px;
+    display: block;
+}
+
+/* Dettagli */
+.dettagli_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: var(--spacing-lg);
+}
+
+.dettagli_container h2 {
+    font-size: 2rem;
+    color: #000;
+}
+
+
+.dettagli_container p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #000;
 }
 
 
@@ -168,13 +251,6 @@ p {
 nav ul {
     display: flex;
     gap: var(--spacing-sm);
-}
-
-.hero {
-    display: flex;
-    flex-direction: row;
-    gap: 3px;
-    margin-right: 2rem;
 }
 
 .hero__text {
@@ -199,8 +275,6 @@ a.cta__audiolibro {
     background: white;
     border: solid #F2ACB2;
     padding: 0.5rem;
-    margin-top: 2rem;
-    margin-right: 2rem;
 }
 
 
@@ -217,6 +291,12 @@ a.cta__audiolibro:hover {
 .cta-group {
     padding-top: 2rem;
     margin-left: 1.5rem;
+    gap: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 nav li {
